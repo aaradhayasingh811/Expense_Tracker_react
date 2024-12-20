@@ -52,14 +52,19 @@ const Content = () => {
     eduMoney = 0,
     foodMoney = 0,
     othMoney = 0;
-
+    money.forEach(item => {
+      if (item.action === "Credited") {
+          Total += parseFloat(item.amount.slice(1));
+      }
+      else{
+          Total -= parseFloat(item.amount.slice(1));
+      }
+    })
   money.forEach(item => {
     const value = parseFloat(item.amount);
     if (item.action === "Credited") {
-      Total += value;
       creditMoney += value;
     } else if (item.action === "Debited") {
-      Total -= value;
       if (item.tag === "Shopping") shoppingMoney += value;
       if (item.tag === "Education") eduMoney += value;
       if (item.tag === "Food") foodMoney += value;
