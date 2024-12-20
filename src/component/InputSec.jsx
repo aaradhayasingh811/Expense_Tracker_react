@@ -5,6 +5,7 @@ const InputSec = ({ amount, addMoney, reduceMoney, handleOnChange ,total, handle
     <>
       <div className="my-8 bg-gray-100 p-4 rounded">
         <form >
+        <h4 className='mt-2 mb-4'>Enter the amount</h4>
         <input
           type="text"
           className="w-100 outline-none rounded border-0 p-2 bg-gray-50"

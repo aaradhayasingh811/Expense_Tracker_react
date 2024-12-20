@@ -9,7 +9,10 @@ const DataHis = ({dc,value,tag}) => {
             <p>{tag}</p>
         </div>
         <div className="">
-            <p>{value}</p>
+          {dc=="Credited" && <p style={{color:"green"}} className='font-bold'>{value}</p>} 
+          {dc=="Debited" && <p style={{color:"red"}}  className='font-bold'>{value}</p>} 
+
+            
         </div>
     </div>
       

@@ -20,7 +20,8 @@ const Content = () => {
       alert("Please enter a valid amount.");
       return;
     }
-    const newData = [...money, { action: "Credited", amount: amount, tag: selectedTag }];
+    const data = "+" + amount;
+    const newData = [...money, { action: "Credited", amount: data, tag: selectedTag }];
     setMoney(newData);
   }
 
@@ -33,7 +34,8 @@ const Content = () => {
     if (Total < amount) {
       alert("Insufficient balance.");
     } else {
-      const newData = [...money, { action: "Debited", amount: amount, tag: selectedTag }];
+      const data = "-" + amount;
+      const newData = [...money, { action: "Debited", amount: data, tag: selectedTag }];
       setMoney(newData);
     }
   }
