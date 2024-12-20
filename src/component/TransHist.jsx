@@ -27,7 +27,7 @@ const TransHist = ({ money }) => {
 
   return (
     <>
-      <div className="my-8 bg-gray-100 p-4 rounded overflow-y-scroll h-screen">
+      <div className="my-8 bg-gray-100 p-4 rounded overflow-y-scroll h-96">
         <div className="flex w-full bg-white rounded items-center justify-between">
           <h2 className="text-xl text-center p-2">Transaction History</h2>
           {/* Pass filterOnClick to Filter component */}
